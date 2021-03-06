@@ -18,4 +18,4 @@ func _process(delta):
 		direcao.y = 1
 
 func _physics_process(delta):
-	move_and_slide(direcao * 666)
+	move_and_slide(direcao * 500)
