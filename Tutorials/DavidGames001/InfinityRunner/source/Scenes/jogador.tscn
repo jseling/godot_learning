@@ -1,15 +1,21 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/jogador.gd" type="Script" id=1]
 [ext_resource path="res://Images/Players/Variable sizes/Blue/alienBlue_walk1.png" type="Texture" id=2]
 [ext_resource path="res://Images/Players/Variable sizes/Blue/alienBlue_walk2.png" type="Texture" id=3]
 [ext_resource path="res://Images/Players/Variable sizes/Blue/alienBlue_stand.png" type="Texture" id=4]
+[ext_resource path="res://Images/Players/Variable sizes/Blue/alienBlue_jump.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 4 ) ],
 "loop": false,
 "name": "parado",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": false,
+"name": "pulando",
 "speed": 0.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
@@ -19,9 +25,10 @@ animations = [ {
 } ]
 
 [node name="jogador" type="Area2D"]
+position = Vector2( 145, 113 )
 script = ExtResource( 1 )
 
 [node name="sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 1 )
 frames = SubResource( 1 )
-animation = "correndo"
-frame = 1
+animation = "pulando"
