@@ -33,6 +33,16 @@ func _physics_process(delta):
 		$sprite.play("pulando")
 
 	position += velocidade * delta
+	
+	if Input.is_action_just_pressed("ui_down"):
+		$sprite.scale.y = .6
+		$shape.scale.y = .6
+		$shape.position.y = 35
+	elif Input.is_action_just_released("ui_down"):
+		$sprite.scale.y = 1
+		$shape.scale.y = 1
+		$shape.position.y = 0	
+	
 	if position.y >= limite:
 		position.y = limite
 #		no_chao = true
@@ -40,3 +50,7 @@ func _physics_process(delta):
 		slow = true
 		$sprite.play("correndo")
 #		get_node("sprite").play("correndo")
+
+
+func _on_jogador_area_entered(area):
+	pass # Replace with function body.
