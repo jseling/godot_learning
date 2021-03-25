@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/obj_pequeno.gd" type="Script" id=1]
+[ext_resource path="res://Images/Tiles/boxCrate_double.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 59.6821, 59.8576 )
+
+[node name="obj_pequeno" type="Area2D"]
+position = Vector2( 1368.96, 416.399 )
+script = ExtResource( 1 )
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( 0, -63.9803 )
+texture = ExtResource( 2 )
+
+[node name="shape" type="CollisionShape2D" parent="."]
+position = Vector2( 0.374588, -64.0526 )
+shape = SubResource( 1 )
+
+[node name="vis" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -0.206356, -64.0079 )
+scale = Vector2( 6.8337, 6.85354 )
+[connection signal="screen_exited" from="vis" to="." method="_on_vis_screen_exited"]
