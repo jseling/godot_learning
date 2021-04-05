@@ -6,35 +6,35 @@
 - [x] [Corrida infinita Godot - ep1 importar (clone do Dino Google)](https://www.youtube.com/watch?v=QIat6Gz8gOk)
 
 - Colocar em 2D
-- Ir em Project>Project Settings, na ·rvore selecionar Display>Window:
+- Ir em Project>Project Settings, na √°rvore selecionar Display>Window:
 - - Colocar Width como 1280 e Height como 720;
 - - Colocar Stretch>Mode colocar "2d" e em Stretch>Aspect colocar "keep";
 - Em FileSystem criar duas pastas, "Scenes" e "Scripts".
 
-A Godot possui 3 tipos de nÛs bases, "2D" para jogos em 2D, "3D" para jogos em 3D, "User Interface" para interface de usu·rio.
-A opÁ„o "Other Node" permite adiÁ„o de nÛs de animaÁ„o, canvas, timers, entre outros nÛs especÌficos.
-O personagem È um objeto que se move e detecta a colis„o com outros objetos:
+A Godot possui 3 tipos de n√≥s bases, "2D" para jogos em 2D, "3D" para jogos em 3D, "User Interface" para interface de usu√°rio.
+A op√ß√£o "Other Node" permite adi√ß√£o de n√≥s de anima√ß√£o, canvas, timers, entre outros n√≥s espec√≠ficos.
+O personagem √© um objeto que se move e detecta a colis√£o com outros objetos:
 
-- Selecionar Node>CanvasItem>Node2D>CollisionObject2D>Area2D. N„o vamos usar o outro objeto de fÌsica pois n„o h· necessidade.
+- Selecionar Node>CanvasItem>Node2D>CollisionObject2D>Area2D. N√£o vamos usar o outro objeto de f√≠sica pois n√£o h√° necessidade.
 
-Precisamos adicionar uma cara ao nodo recÈm criado. 
-Na ·rvore da cena selecionar o nodo recÈm criado, clicar com o bot„o direito e selecionar "Add child node".
-Adicionaremos um nÛ filho, esse nodo vai adicionar propriedades ao nodo pai.
+Precisamos adicionar uma cara ao nodo rec√©m criado. 
+Na √°rvore da cena selecionar o nodo rec√©m criado, clicar com o bot√£o direito e selecionar "Add child node".
+Adicionaremos um n√≥ filho, esse nodo vai adicionar propriedades ao nodo pai.
 
-- O nÛ filho ser· o Node>CanvasItem>Node2D>AnimatedSprite que permite criar sprites animados autom·ticamente.
+- O n√≥ filho ser√° o Node>CanvasItem>Node2D>AnimatedSprite que permite criar sprites animados autom√°ticamente.
 
-No nodo de AnimatedSprite recÈm criado, no inspector dele na propriedade Frames que est· como "Empty", clicar nela e escolher "New SpriteFrames" e clicar nele.
-Vai aparecer uma tela para configurar as animaÁıes do sprite.
-Nela j· vem uma animaÁ„o chamada "default", clique nela para mudar o nome para "parado".
-O "Speed (FPS)" colocar como "0" e desativar a opÁ„o "Loop".
-Criar uma nova animaÁ„o chamada "correndo" clicando no bot„o "New Animation".
-O "Speed (FPS)" dela colocar como "8" e deixar ativada a opÁ„o "Loop".
-Agora selecione novamente a animaÁ„o "parado". V· no "FileSystem" na pasta Images em "Players>Variable sizes>Blue" e selecione o arquivo "alienBlue_stand.png". Clique e arraste ele para a ·rea de "Animation Frames", essa ˙nica imagem ser· a animaÁ„o de "parado".
-Selecione novamente a animaÁ„o "correndo". Nela adicione os arquivos "alienBlue_walk1.png" e "alienBlue_walk2.png".
-No "Inspector" do AnimatedSprite pode-se ver a animaÁ„o marcando a propriedade "Playing", desmarque depois de ver como ficou.
-Mude o nome do nÛ "Area2D" para "jogador" e do "AnimatedSprite" para "sprite".
+No nodo de AnimatedSprite rec√©m criado, no inspector dele na propriedade Frames que est√° como "Empty", clicar nela e escolher "New SpriteFrames" e clicar nele.
+Vai aparecer uma tela para configurar as anima√ß√µes do sprite.
+Nela j√° vem uma anima√ß√£o chamada "default", clique nela para mudar o nome para "parado".
+O "Speed (FPS)" colocar como "0" e desativar a op√ß√£o "Loop".
+Criar uma nova anima√ß√£o chamada "correndo" clicando no bot√£o "New Animation".
+O "Speed (FPS)" dela colocar como "8" e deixar ativada a op√ß√£o "Loop".
+Agora selecione novamente a anima√ß√£o "parado". V√° no "FileSystem" na pasta Images em "Players>Variable sizes>Blue" e selecione o arquivo "alienBlue_stand.png". Clique e arraste ele para a √°rea de "Animation Frames", essa √∫nica imagem ser√° a anima√ß√£o de "parado".
+Selecione novamente a anima√ß√£o "correndo". Nela adicione os arquivos "alienBlue_walk1.png" e "alienBlue_walk2.png".
+No "Inspector" do AnimatedSprite pode-se ver a anima√ß√£o marcando a propriedade "Playing", desmarque depois de ver como ficou.
+Mude o nome do n√≥ "Area2D" para "jogador" e do "AnimatedSprite" para "sprite".
 
-- Adicione um script no nÛ "jogador" clicando no bot„o "Attach node script". Selecione a pasta onde vai ficar o script "Scripts". Clique em "Create".
+- Adicione um script no n√≥ "jogador" clicando no bot√£o "Attach node script". Selecione a pasta onde vai ficar o script "Scripts". Clique em "Create".
 
 Colocar o seguinte script:
 
@@ -58,9 +58,9 @@ func _physics_process(delta):
 		position.y = limite
 ```
 
-- Para criar uma tecla de referÍncia v· em Project>Project Settings na aba "Input Map", no campo "Action:" coloque "pulo" e clique em "Add". Ela sr· criada no fim da lista. Clique no bot„o de + nela para adicionar a tecla de "espaÁo" para ser a tecla de pulo. 
+- Para criar uma tecla de refer√™ncia v√° em Project>Project Settings na aba "Input Map", no campo "Action:" coloque "pulo" e clique em "Add". Ela sr√° criada no fim da lista. Clique no bot√£o de + nela para adicionar a tecla de "espa√ßo" para ser a tecla de pulo. 
 
-- Clique no bot„o "Play Scene (F6)" para testar.
+- Clique no bot√£o "Play Scene (F6)" para testar.
 
 <<minuto 5:50>>
 
@@ -69,24 +69,29 @@ func _physics_process(delta):
 - [ ] [Corrida infinita Godot - extra pulo duplo](https://www.youtube.com/watch?v=Rs8y17rP0T4)
 
 
-- [ ] [Ele me DESAFIOU, ent„o eu CRIEI UM JOGO EM UM DIA no Godot!](https://www.youtube.com/watch?v=ln-Q_4BWYCo)
+- [ ] [Ele me DESAFIOU, ent√£o eu CRIEI UM JOGO EM UM DIA no Godot!](https://www.youtube.com/watch?v=ln-Q_4BWYCo)
 
-- [ ] [Godot 3 | B·sico](https://www.youtube.com/watch?v=Isa29mdpsks&list=PL1W6qGlVxnrO835T4g7pBy0ixMfChPLJy)
-- [ ] [Godot 3 | Intermedi·rio](https://www.youtube.com/watch?v=qaZZiYto0sY&list=PL1W6qGlVxnrOi876Fdz9wTEsDntNxppYA)
+- [ ] [Godot 3 | B√°sico](https://www.youtube.com/watch?v=Isa29mdpsks&list=PL1W6qGlVxnrO835T4g7pBy0ixMfChPLJy)
+- [ ] [Godot 3 | Intermedi√°rio](https://www.youtube.com/watch?v=qaZZiYto0sY&list=PL1W6qGlVxnrOi876Fdz9wTEsDntNxppYA)
 - [ ] [Godot 3](https://www.youtube.com/watch?v=LR6D5bunRqg&list=PLk9XvfPR8vS_EOidYR4kwGtC1otkplISO)
 
-- [ ] [Cria jogo: (Receita bolo) IntroduÁ„o Godot Engine - Tutorial r·pido de Godot, Nodes, Scenes, GDScript - 1](https://www.youtube.com/watch?v=gvMmYw8fDJU&list=PLqYboeh3Jru6T0wLKmVBCbHPpyORUoGo7)
+- [ ] [Cria jogo: (Receita bolo) Introdu√ß√£o Godot Engine - Tutorial r√°pido de Godot, Nodes, Scenes, GDScript - 1](https://www.youtube.com/watch?v=gvMmYw8fDJU&list=PLqYboeh3Jru6T0wLKmVBCbHPpyORUoGo7)
 
-- [ ] [#1 - Tutorial Godot - ApresentaÁ„o da Ferramenta e InÌcio do projeto [PT br]](https://www.youtube.com/watch?v=XyMeFxgT7YU)
+- [ ] [#1 - Tutorial Godot - Apresenta√ß√£o da Ferramenta e In√≠cio do projeto [PT br]](https://www.youtube.com/watch?v=XyMeFxgT7YU)
 
-Os objetos no Godot possuem [notificaÁıes](https://docs.godotengine.org/en/stable/getting_started/workflow/best_practices/godot_notifications.html), que nada mais s„o do que eventos disparados por eles quando alguma situaÁ„o ocorre.
+Os objetos no Godot possuem [notifica√ß√µes](https://docs.godotengine.org/en/stable/getting_started/workflow/best_practices/godot_notifications.html), que nada mais s√£o do que eventos disparados por eles quando alguma situa√ß√£o ocorre.
 
 
 func _ready():
-Ocorre quando o objeto È criado.
+Ocorre quando o objeto √© criado.
 
 func _process(delta):
-… o update ou step de outras bibliotecas e engines. … dependente do framerate.
+√â o update ou step de outras bibliotecas e engines. √â dependente do framerate.
 
 func _physics_process(delta):
-… um update independente do framerate.
+√â um update independente do framerate.
+
+
+## Knowledge
+
+- [Making an online multiplayer game with Godot and Nakama](https://heroiclabs.com/blog/announcements/godot-fishgame/)
